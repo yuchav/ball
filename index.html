@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    *{margin:0;padding:0;}
+    html,body{
+    	width:100%;
+    	height:100%;
+    	max-width:100%;
+    	max-height:100%;
+    }
+    .ball{position: absolute;border-radius:50%;transition: all 1s;}
+    .a{background:red;}
+    .b{background:orange;}
+    .c{background:yellow;}
+    .d{background:green;}
+    .e{background:pink;}
+
+    .a-mod .a{
+    	width:200px;
+    	height:200px;
+    	top:800px;
+    	left:100px;
+    }
+
+    .a-mod .b{
+    	width:120px;
+    	height:120px;
+    	top:500px;
+    	left:150px;
+    }
+
+    .a-mod .c{
+    	width:80px;
+    	height:80px;
+    	top:340px;
+    	left:350px;
+    }
+
+    .a-mod .d{
+    	width:60px;
+    	height:60px;
+    	top:340px;
+    	left:570px;
+    }
+
+    .a-mod .e{
+    	width:150px;
+    	height:150px;
+    	top:640px;
+    	left:450px;
+    }
+
+
+
+    .b-mod .b{
+    	width:200px;
+    	height:200px;
+    	top:800px;
+    	left:100px;
+    }
+
+    .b-mod .c{
+    	width:120px;
+    	height:120px;
+    	top:500px;
+    	left:150px;
+    }
+
+    .b-mod .d{
+    	width:80px;
+    	height:80px;
+    	top:340px;
+    	left:350px;
+    }
+
+    .b-mod .e{
+    	width:60px;
+    	height:60px;
+    	top:340px;
+    	left:570px;
+    }
+
+    .b-mod .a{
+    	width:150px;
+    	height:150px;
+    	top:640px;
+    	left:450px;
+    }
+
+
+
+    .c-mod .c{
+    	width:200px;
+    	height:200px;
+    	top:800px;
+    	left:100px;
+    }
+
+    .c-mod .d{
+    	width:120px;
+    	height:120px;
+    	top:500px;
+    	left:150px;
+    }
+
+    .c-mod .e{
+    	width:80px;
+    	height:80px;
+    	top:340px;
+    	left:350px;
+    }
+
+    .c-mod .a{
+    	width:60px;
+    	height:60px;
+    	top:340px;
+    	left:570px;
+    }
+
+    .c-mod .b{
+    	width:150px;
+    	height:150px;
+    	top:640px;
+    	left:450px;
+    }
+
+
+
+    .d-mod .d{
+    	width:200px;
+    	height:200px;
+    	top:800px;
+    	left:100px;
+    }
+
+    .d-mod .e{
+    	width:120px;
+    	height:120px;
+    	top:500px;
+    	left:150px;
+    }
+
+    .d-mod .a{
+    	width:80px;
+    	height:80px;
+    	top:340px;
+    	left:350px;
+    }
+
+    .d-mod .b{
+    	width:60px;
+    	height:60px;
+    	top:340px;
+    	left:570px;
+    }
+
+    .d-mod .c{
+    	width:150px;
+    	height:150px;
+    	top:640px;
+    	left:450px;
+    }
+
+
+    .e-mod .e{
+    	width:200px;
+    	height:200px;
+    	top:800px;
+    	left:100px;
+    }
+
+    .e-mod .a{
+    	width:120px;
+    	height:120px;
+    	top:500px;
+    	left:150px;
+    }
+
+    .e-mod .b{
+    	width:80px;
+    	height:80px;
+    	top:340px;
+    	left:350px;
+    }
+
+    .e-mod .c{
+    	width:60px;
+    	height:60px;
+    	top:340px;
+    	left:570px;
+    }
+
+    .e-mod .d{
+    	width:150px;
+    	height:150px;
+    	top:640px;
+    	left:450px;
+    }
+    </style>
+  </head>
+  <body class="a-mod">
+	<div id="a" class="a ball"></div>
+	<div id="b" class="b ball"></div>
+	<div id="c" class="c ball"></div>
+	<div id="d" class="d ball"></div>
+	<div id="e" class="e ball"></div>
+	<script type="text/javascript">
+	var balls = document.getElementsByClassName('ball');
+	var body = document.getElementsByTagName('body')[0];
+	var l = balls.length;
+	var i = 0;
+	for(i=0;i<l;i++){
+		var ball = balls[i];
+		ball.addEventListener('click',function(eventObject){
+			var target = eventObject.target;
+			body.className = ''+ target.id + '-mod';
+		})
+	}
+
+	</script>
+  </body>
+</html>
